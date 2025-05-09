@@ -1,0 +1,61 @@
+#contact {
+    background-color: var(--contact-bg-day);
+    padding: 50px 20px;
+    color: var(--text-day);
+    text-align: center;
+}
+
+body.night-mode #contact {
+    background-color: var(--contact-bg-night);
+    color: var(--text-night);
+}
+
+#contact h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#contact .form-control {
+    border-radius: 10px;
+    border: 2px solid var(--button-bg-day);
+    padding: 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+body.night-mode #contact .form-control {
+    border-color: var(--button-bg-night);
+}
+
+#contact .form-control:focus {
+    border-color: var(--button-hover-bg-day);
+    box-shadow: 0 0 10px rgba(255, 121, 97, 0.5);
+}
+
+body.night-mode #contact .form-control:focus {
+    border-color: var(--button-hover-bg-night);
+}
+
+#contact .btn-primary {
+    background-color: var(--button-bg-day);
+    color: var(--button-text-day);
+    border: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+body.night-mode #contact .btn-primary {
+    background-color: var(--button-bg-night);
+    color: var(--button-text-night);
+}
+
+#contact .btn-primary:hover {
+    background-color: var(--button-hover-bg-day);
+    color: var(--button-hover-text-day);
+    transform: scale(1.05);
+}
+
+body.night-mode #contact .btn-primary:hover {
+    background-color: var(--button-hover-bg-night);
+    color: var(--button-hover-text-night);
+}

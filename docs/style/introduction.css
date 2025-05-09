@@ -1,0 +1,35 @@
+#introduction {
+    background-color: var(--introduction-bg-day);
+    padding: 100px 20px;
+    color: var(--text-day);
+    text-align: center;
+    margin-top: 0;
+    padding-top: 150px;
+    z-index: 0;
+}
+
+body.night-mode #introduction {
+    background-color: var(--introduction-bg-night);
+    color: var(--text-night);
+}
+
+.photo-container {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}

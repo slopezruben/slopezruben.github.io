@@ -1,0 +1,128 @@
+#projects-and-blog {
+    padding: 50px 20px;
+    background-color: var(--projects-bg-day);
+}
+
+body.night-mode #projects-and-blog {
+    background-color: var(--projects-bg-night);
+}
+
+#projects-and-blog .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects-and-blog #projects,
+#projects-and-blog #blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+#projects-and-blog #projects .card,
+#projects-and-blog #blog {
+    flex: 1;
+}
+
+#projects-and-blog .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects-and-blog .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#projects-and-blog .card-img-top {
+    border-radius: 5px 5px 0 0;
+}
+
+#projects-and-blog .list-group-item {
+    border: none;
+    padding: 15px 20px; /* Más espacio interno */
+    background-color: var(--projects-bg-day);
+    color: var(--blog-link-color-day); /* Usar color de enlace diurno */
+    font-size: 1.2rem; /* Texto más grande */
+    font-weight: bold; /* Resaltar texto */
+    text-decoration: none; /* Quitar subrayado */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre elementos */
+    cursor: pointer;
+}
+
+body.night-mode #projects-and-blog .list-group-item {
+    background-color: var(--projects-bg-night);
+    color: var(--blog-link-color-night); /* Usar color de enlace nocturno */
+}
+
+#projects-and-blog .list-group-item:hover,
+#projects-and-blog .list-group-item:focus {
+    background-color: var(--button-hover-bg-day);
+    color: var(--blog-link-hover-color-day); /* Color de enlace al hacer hover */
+    transform: scale(1.02); /* Ligeramente más grande al hacer hover */
+}
+
+body.night-mode #projects-and-blog .list-group-item:hover,
+body.night-mode #projects-and-blog .list-group-item:focus {
+    background-color: var(--button-hover-bg-night);
+    color: var(--blog-link-hover-color-night); /* Color de enlace nocturno al hacer hover */
+}
+
+#projects-and-blog .list-group-item a {
+    color: var(--blog-link-color-day);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+body.night-mode #projects-and-blog .list-group-item a {
+    color: var(--blog-link-color-night);
+}
+
+#projects-and-blog .list-group-item:hover a,
+#projects-and-blog .list-group-item:focus a {
+    color: var(--blog-link-hover-color-day);
+    text-decoration: none;
+}
+
+body.night-mode #projects-and-blog .list-group-item:hover a,
+body.night-mode #projects-and-blog .list-group-item:focus a {
+    color: var(--blog-link-hover-color-night);
+    text-decoration: none;
+}
+
+#projects-and-blog .btn-primary {
+    background-color: var(--button-bg-day);
+    color: var(--button-text-day);
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.night-mode #projects-and-blog .btn-primary {
+    background-color: var(--button-bg-night);
+    color: var(--button-text-night);
+}
+
+#projects-and-blog .btn-primary:hover {
+    background-color: var(--button-hover-bg-day);
+    color: var(--button-hover-text-day);
+}
+
+body.night-mode #projects-and-blog .btn-primary:hover {
+    background-color: var(--button-hover-bg-night);
+    color: var(--button-hover-text-night);
+}
+
+#projects-and-blog h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-day);
+    margin-bottom: 20px; /* Añadir margen con el contenido */
+    text-align: center;
+}
+
+body.night-mode #projects-and-blog h2 {
+    color: var(--text-night); /* Mejorar legibilidad en modo noche */
+}

@@ -1,0 +1,73 @@
+#cv {
+    background-color: var(--cv-bg-day);
+    padding: 50px 20px;
+    color: var(--cv-text-day);
+    text-align: center;
+}
+
+body.night-mode #cv {
+    background-color: var(--cv-bg-night);
+    color: var(--text-night);
+}
+
+.cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    row-gap: 5px;
+}
+
+.hexagon {
+    position: relative;
+    width: 100px;
+    height: 115px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hexagon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.hexagon img {
+    width: 40%;
+    height: 40%;
+    object-fit: contain;
+}
+
+.cv-hex {
+    position: relative;
+    margin-top: 10px;
+}
+
+.cv-hex:hover .sliding-info {
+    left: calc(100% + 10px);
+    top: calc(50% - 10px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sliding-info {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: left 0.3s ease, opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+}
