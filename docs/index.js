@@ -93,4 +93,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     highlightSection();
+
+    // Oculta el header en móvil usando JS
+    function toggleHeaderOnMobile() {
+        const header = document.querySelector('header');
+        if (!header) return;
+        if (window.innerWidth <= 991) {
+            header.style.display = "none";
+        } else {
+            header.style.display = "";
+        }
+    }
+    window.addEventListener('resize', toggleHeaderOnMobile);
+    toggleHeaderOnMobile();
 });
