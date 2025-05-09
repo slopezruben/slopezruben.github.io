@@ -96,17 +96,21 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', toggleHeaderOnMobile);
     toggleHeaderOnMobile();
 
-    // Skill info panel hover logic
-    const skillInfoPanel = document.getElementById('skill-info-panel');
-    const skillHexes = document.querySelectorAll('.cv-hex[data-info]');
-    if (skillInfoPanel && skillHexes.length > 0) {
-        skillHexes.forEach(hex => {
-            hex.addEventListener('mouseenter', () => {
-                skillInfoPanel.textContent = hex.getAttribute('data-info');
-            });
-            hex.addEventListener('mouseleave', () => {
-                skillInfoPanel.textContent = 'Hover a skill to see info here';
-            });
-        });
+    // Typing effect for #name (only first visit)
+    const nameEl = document.getElementById('name');
+
+    if (nameEl) {
+        const fullText = nameEl.textContent;
+        nameEl.textContent = '';
+        let idx = 0;
+
+        function typeChar() {
+            if (idx < fullText.length) {
+                nameEl.textContent += fullText.charAt(idx);
+                idx++;
+                setTimeout(typeChar, 60);
+            }
+        }
+        typeChar();
     }
 });

@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="style/cv.css">
     <link rel="stylesheet" href="style/projects-and-blog.css">
     <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/terminal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body class="night-mode">
@@ -36,13 +37,12 @@
             <div class="photo-container">
                 <img src="img/profile.jpg" alt="Your Photo" class="rounded-circle">
             </div>
-            <h2>Rubén López Singla</h2>
+            <h2 id="name">I'm Rubén López Singla</h2>
             <p>Welcome to my portfolio! I am a passionate developer with a love for creating innovative solutions and exploring new technologies.</p>
         </section>
         <section id="cv">
-            <h2>Skills Overview</h2>
             <div class="row justify-content-center align-items-start">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="skills-groups">
                         <div class="skills-category">
                             <h3>Languages</h3>
@@ -59,11 +59,11 @@
                                     </div>
                                     <span class="skill-name d-block d-md-none">JavaScript</span>
                                 </div>
-                                <div class="cv-hex" data-info="SQL: prueba info">
+                                <div class="cv-hex" data-info="Python: prueba info">
                                     <div class="hexagon d-flex align-items-center justify-content-center">
-                                        <i class="devicon-mysql-plain " style="font-size: 2.5rem;"></i>
+                                        <i class="devicon-python-plain " style="font-size: 2.5rem;"></i>
                                     </div>
-                                    <span class="skill-name d-block d-md-none">SQL</span>
+                                    <span class="skill-name d-block d-md-none">Python</span>
                                 </div>
                                 <div class="cv-hex" data-info="C: prueba info">
                                     <div class="hexagon d-flex align-items-center justify-content-center">
@@ -106,13 +106,21 @@
                                     </div>
                                     <span class="skill-name d-block d-md-none">Data Science</span>
                                 </div>
+                                <div class="cv-hex" data-info="MySQL: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-mysql-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">MySQL</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
-                    <div id="skill-info-panel" class="w-100 text-center p-4 rounded" style="min-height:120px;">
-                        Hover a skill to see info here
+                <div class="col-md-7 d-none d-md-flex">
+                    <div id="terminal" class="text-center p-4 rounded" style="min-height:120px; position:relative;">
+                        <div id="terminal-title" style="font-weight:bold; margin-bottom:1rem; text-align:left;">Hover a skill to see info here</div>
+                        <div id="terminal-content" style="text-align:left;"></div>
+                        <input class="terminal-input" type="text" placeholder="Type a command... Try typing 'help'!" autocomplete="off" />
                     </div>
                 </div>
             </div>
@@ -181,7 +189,7 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <div class="container text-center">
-                <form action="mailto:your-email@example.com" method="get" class="row g-3 justify-content-center">
+                <form action="mailto:slopez.rubent@gmail.com" method="get" class="row g-3 justify-content-center">
                     <div class="col-md-6">
                         <label for="name" class="form-label">Name:</label>
                         <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
@@ -215,5 +223,6 @@
         <p>&copy; 2025 Rubén López. All rights reserved.</p>
     </footer>
     <script src="index.js"></script>
+    <script src="terminal.js"></script>
 </body>
 </html>

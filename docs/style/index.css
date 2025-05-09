@@ -43,6 +43,11 @@ body {
     color: var(--text-day); /* Verde bosque para el texto */
 }
 
+body.night-mode {
+    background-color: var(--background-night);
+    color: var(--text-night);
+}
+
 /* Evita scroll horizontal y barra blanca en móvil */
 html, body {
     overflow-x: hidden;
@@ -131,4 +136,11 @@ body.night-mode footer ul li a {
 
 body.night-mode footer ul li a:hover {
     color: var(--footer-link-hover-color-night);
+}
+
+/* Desplazamiento para el contenido principal solo en escritorio */
+@media (min-width: 992px) {
+    #cv {
+        padding-left: 220px !important;
+    }
 }
