@@ -1,4 +1,4 @@
-// Terminal info panel hover logic (title + content)
+/* Terminal input sim */
 document.addEventListener("DOMContentLoaded", function () {
     const terminalTitle = document.getElementById('terminal-title');
     const terminalContent = document.getElementById('terminal-content');
@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (terminalTitle && terminalContent && skillHexes.length > 0) {
         skillHexes.forEach(hex => {
             hex.addEventListener('mouseenter', () => {
-                // Split data-info by ':' for title/content separation
                 const info = hex.getAttribute('data-info') || '';
                 const [title, ...rest] = info.split(':');
                 terminalTitle.textContent = title ? title.trim() : '';
@@ -15,12 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             hex.addEventListener('mouseleave', () => {
                 terminalTitle.textContent = 'Hover a skill to see info here';
-                terminalContent.textContent = '';
+                terminalContent.textContent = 'This are some of the tools I know, but I\'m always eager to learn something new...';
             });
         });
     }
 
-    // Terminal input command simulation
     const terminalInput = document.querySelector('#terminal .terminal-input');
     if (terminalInput && terminalTitle && terminalContent) {
         terminalInput.addEventListener('keydown', function (e) {
@@ -42,19 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: 'cat.gif', content: "Sorry, this terminal does not support GIFs. Imagine a cute cat here." }
     ];
 
-    var currentPath = '/';
-
     function simulateTerminalCommand(cmd) {
-        // Simple simulation: add your own commands here
-
         switch (cmd.split(" ")[0].toLowerCase()) {
             case 'help':
-                return "Available commands: help, whoami, clear, date, echo, ls, cat, pokedex";
+                return "Available commands: help, whoami, clear, date, echo, cat, ls, read, pokedex";
             case 'whoami':
                 return "Rubén López Singla - Software Engineer. Find me on GitHub: slopezruben";
             case 'clear':
                 terminalTitle.textContent = 'Hover a skill to see info here';
-                terminalContent.textContent = '';
+                terminalContent.textContent = 'This are some of the tools I know, but I\'m always eager to learn something new...';
                 return '';
             case 'date':
                 return new Date().toString();
@@ -62,7 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 return cmd.split(" ").slice(1).join(" ");
             case 'ls':
                 return files.map(file => file.name).join("\n");
+            case 'read':
             case 'cat':
+                if(cmd.split(" ").length < 2) return "Usage: cat <file_name>. See files with 'ls'.";
                 return cmd.split(" ").slice(1).map(fileName => {
                     const file = files.find(f => f.name === fileName);
                     if (file) {

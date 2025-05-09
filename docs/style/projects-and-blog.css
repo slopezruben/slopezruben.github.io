@@ -25,14 +25,34 @@ body.night-mode #projects-and-blog {
 }
 
 #projects-and-blog .card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--button-bg-day);
+    background-color: var(--cv-bg-day);
+    color: var(--cv-text-day);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 #projects-and-blog .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--button-hover-bg-day);
+    color: var(--button-hover-text-day);
+    border-color: var(--button-hover-bg-day);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+}
+
+body.night-mode #projects-and-blog .card {
+    background-color: var(--cv-bg-night);
+    color: var(--text-night);
+    border: 2px solid var(--button-bg-night);
+    box-shadow: 0 4px 16px rgba(0, 255, 0, 0.08);
+}
+
+body.night-mode #projects-and-blog .card:hover {
+    background-color: var(--button-hover-bg-night);
+    color: var(--button-hover-text-night);
+    border-color: var(--button-hover-bg-night);
+    box-shadow: 0 8px 32px rgba(0, 255, 0, 0.18);
 }
 
 #projects-and-blog .card-img-top {
@@ -116,6 +136,33 @@ body.night-mode #projects-and-blog .btn-primary {
 }
 
 body.night-mode #projects-and-blog .btn-primary:hover {
+    background-color: var(--button-hover-bg-night);
+    color: var(--button-hover-text-night);
+    border-color: var(--button-hover-text-night);
+}
+
+#projects-and-blog .btn-outline-primary {
+    background-color: var(--button-bg-day);
+    color: var(--button-text-day);
+    border: 2px solid var(--button-text-day);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#projects-and-blog .btn-outline-primary:hover,
+#projects-and-blog .btn-outline-primary:focus {
+    background-color: var(--button-hover-bg-day);
+    color: var(--button-hover-text-day);
+    border-color: var(--button-hover-text-day);
+}
+
+body.night-mode #projects-and-blog .btn-outline-primary {
+    background-color: var(--button-bg-night);
+    color: var(--button-text-night);
+    border: 2px solid var(--button-text-night);
+}
+
+body.night-mode #projects-and-blog .btn-outline-primary:hover,
+body.night-mode #projects-and-blog .btn-outline-primary:focus {
     background-color: var(--button-hover-bg-night);
     color: var(--button-hover-text-night);
     border-color: var(--button-hover-text-night);

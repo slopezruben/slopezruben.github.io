@@ -1,3 +1,4 @@
+/* TOGGLE NIGHT MODE */
 document.addEventListener('DOMContentLoaded', () => {
     const toggleThemeButton = document.getElementById('toggle-theme');
     function updateIcon() {
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateIcon();
 });
 
+/* HEADER NAVIGATION HIGHLIGHTING */
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll('header .navbar-nav .nav-link');
 
@@ -50,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const isLast = idx === lastIdx;
             const nearBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 2);
 
-            // Solo marca el último si estamos realmente al final
             if (isLast && nearBottom) {
                 link.style.fontSize = "1.9rem";
                 link.style.color = getColor(false);
@@ -70,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setNavLinkStyles();
     window.addEventListener('scroll', highlightSection);
 
-    // Actualiza estilos al cambiar el modo de tema
     const toggleThemeButton = document.getElementById('toggle-theme');
     if (toggleThemeButton) {
         toggleThemeButton.addEventListener('click', () => {
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     highlightSection();
 
-    // Oculta el header en móvil usando JS
+    /* TOGGLE HEADER ON MOBILE */
     function toggleHeaderOnMobile() {
         const header = document.querySelector('header');
         if (!header) return;
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', toggleHeaderOnMobile);
     toggleHeaderOnMobile();
 
-    // Typing effect for #name (only first visit)
+    /* NAME TYPING EFFECT */
     const nameEl = document.getElementById('name');
 
     if (nameEl) {
