@@ -5,17 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleThemeButton.innerHTML = isNight
             ? '<i class="fas fa-moon"></i>'
             : '<i class="fas fa-sun"></i>';
-        // JS aplica colores directamente
-        if (isNight) {
-            toggleThemeButton.style.backgroundColor = "#4A3F35";
-            toggleThemeButton.style.color = "#ff9800";
-        } else {
-            toggleThemeButton.style.backgroundColor = "#4A3F35";
-            toggleThemeButton.style.color = "#D9CAB3";
-        }
-        toggleThemeButton.style.border = "none";
-        toggleThemeButton.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
-        toggleThemeButton.style.transition = "background 0.2s, color 0.2s";
     }
     toggleThemeButton.addEventListener('click', () => {
         document.body.classList.toggle('night-mode');
@@ -106,4 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener('resize', toggleHeaderOnMobile);
     toggleHeaderOnMobile();
+
+    // Skill info panel hover logic
+    const skillInfoPanel = document.getElementById('skill-info-panel');
+    const skillHexes = document.querySelectorAll('.cv-hex[data-info]');
+    if (skillInfoPanel && skillHexes.length > 0) {
+        skillHexes.forEach(hex => {
+            hex.addEventListener('mouseenter', () => {
+                skillInfoPanel.textContent = hex.getAttribute('data-info');
+            });
+            hex.addEventListener('mouseleave', () => {
+                skillInfoPanel.textContent = 'Hover a skill to see info here';
+            });
+        });
+    }
 });

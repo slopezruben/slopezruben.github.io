@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/projects-and-blog.css">
     <link rel="stylesheet" href="style/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
 </head>
 
 <body class="night-mode">
@@ -35,66 +36,83 @@
             <div class="photo-container">
                 <img src="img/profile.jpg" alt="Your Photo" class="rounded-circle">
             </div>
-            <h2>Rubén López</h2>
+            <h2>Rubén López Singla</h2>
             <p>Welcome to my portfolio! I am a passionate developer with a love for creating innovative solutions and exploring new technologies.</p>
         </section>
         <section id="cv">
             <h2>Skills Overview</h2>
-            <div class="container text-center">
-                <div class="row justify-content-center align-items-center">
-                    <!-- Column 1 -->
-                    <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div class="cv-hex" id="hex-java">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java Icon">
+            <div class="row justify-content-center align-items-start">
+                <div class="col-md-6">
+                    <div class="skills-groups">
+                        <div class="skills-category">
+                            <h3>Languages</h3>
+                            <div class="skills-hex-row">
+                                <div class="cv-hex" data-info="Java: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-java-plain" style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">Java</span>
+                                </div>
+                                <div class="cv-hex" data-info="JavaScript: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-javascript-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">JavaScript</span>
+                                </div>
+                                <div class="cv-hex" data-info="SQL: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-mysql-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">SQL</span>
+                                </div>
+                                <div class="cv-hex" data-info="C: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-c-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">C</span>
+                                </div>
+                                <div class="cv-hex" data-info="Bash: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-bash-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">Bash</span>
+                                </div>
                             </div>
-                            <div class="sliding-info">Este pibe sabe Java</div>
                         </div>
-                        <div class="cv-hex" id="hex-spring">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot Icon">
+                        <div class="skills-category">
+                            <h3>Tools and Platforms</h3>
+                            <div class="skills-hex-row">
+                                <div class="cv-hex" data-info="Spring Boot: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-spring-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">Spring Boot</span>
+                                </div>
+                                <div class="cv-hex" data-info="Linux: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-linux-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">Linux</span>
+                                </div>
+                                <div class="cv-hex" data-info="AWS: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-amazonwebservices-plain-wordmark" style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">AWS</span>
+                                </div>
+                                <div class="cv-hex" data-info="Data Science: prueba info">
+                                    <div class="hexagon d-flex align-items-center justify-content-center">
+                                        <i class="devicon-pandas-plain " style="font-size: 2.5rem;"></i>
+                                    </div>
+                                    <span class="skill-name d-block d-md-none">Data Science</span>
+                                </div>
                             </div>
-                            <div class="sliding-info">Este pibe sabe Spring Boot</div>
-                        </div>
-                        <div class="cv-hex" id="hex-js">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Icon">
-                            </div>
-                            <div class="sliding-info">Este pibe sabe JavaScript</div>
-                        </div>
-                        <div class="cv-hex" id="hex-python">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Icon">
-                            </div>
-                            <div class="sliding-info">Este pibe sabe Python</div>
                         </div>
                     </div>
-                    <!-- Column 2 -->
-                    <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div class="cv-hex" id="hex-aws">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS Icon">
-                            </div>
-                            <div class="sliding-info">Este pibe sabe AWS</div>
-                        </div>
-                        <div class="cv-hex" id="hex-c">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C Icon">
-                            </div>
-                            <div class="sliding-info">Este pibe sabe C</div>
-                        </div>
-                        <div class="cv-hex" id="hex-mysql">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Icon">
-                            </div>
-                            <div class="sliding-info">Este pibe sabe MySQL</div>
-                        </div>
-                        <div class="cv-hex" id="hex-bash">
-                            <div class="hexagon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash Icon">
-                            </div>
-                            <div class="sliding-info">Este pibe sabe Bash</div>
-                        </div>
+                </div>
+                <div class="col-md-2 d-none d-md-flex align-items-center justify-content-center">
+                    <div id="skill-info-panel" class="w-100 text-center p-4 rounded" style="min-height:120px;">
+                        Hover a skill to see info here
                     </div>
                 </div>
             </div>
@@ -128,18 +146,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Project 3 -->
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100">
-                                        <img src="img/project3.jpg" class="card-img-top" alt="Project 3 Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Project 3</h5>
-                                            <p class="card-text">A portfolio website showcasing my skills and projects. Built with modern web technologies to highlight my expertise.</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </section>
+                        <!-- Botón a GitHub debajo de los proyectos -->
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <a href="https://github.com/slopezruben" target="_blank" class="btn btn-dark w-100 d-flex align-items-center justify-content-center" style="font-size:1.3rem;">
+                                    <i class="fab fa-github me-2"></i> See more projects on GitHub 
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <!-- Blog Section -->
                     <div class="col-lg-4 col-md-12">
@@ -196,7 +212,7 @@
             <li><a href="https://linkedin.com/in/slopezruben" target="_blank">LinkedIn</a></li>
             <li><a href="#" target="_blank">My Blog</a></li>
         </ul>
-        <p>&copy; 2024 Rubén López. All rights reserved.</p>
+        <p>&copy; 2025 Rubén López. All rights reserved.</p>
     </footer>
     <script src="index.js"></script>
 </body>

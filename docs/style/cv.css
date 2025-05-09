@@ -71,3 +71,79 @@ body.night-mode #cv {
     pointer-events: none;
     z-index: 0;
 }
+
+/* Skills section layout */
+.skills-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+.skills-category {
+    width: 100%;
+    max-width: 700px;
+}
+.skills-category h3 {
+    text-align: left;
+    color: var(--button-text-day);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.skills-hex-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.cv-hex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+.cv-hex .hexagon {
+    width: 80px;
+    height: 80px;
+    background: var(--projects-bg-day);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.cv-hex .hexagon img {
+    width: 48px;
+    height: 48px;
+}
+.cv-hex:hover .hexagon {
+    background: var(--button-hover-bg-day);
+    box-shadow: 0 0 16px var(--button-hover-bg-day);
+}
+.cv-hex .skill-name {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-day);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Night mode styles */
+body.night-mode .skills-category h3 {
+    color: var(--button-text-night);
+}
+body.night-mode .cv-hex .hexagon {
+    background: var(--projects-bg-night);
+    box-shadow: 0 2px 8px rgba(0,255,0,0.08);
+}
+body.night-mode .cv-hex:hover .hexagon {
+    background: var(--button-hover-bg-night);
+    color:    var(--button-hover-text-night); 
+    box-shadow: 0 0 16px var(--button-hover-bg-night);
+}
+body.night-mode .cv-hex .skill-name {
+    color: var(--text-night);
+}
+
+/* ...modo noche similar usando variables night... */

@@ -1,37 +1,38 @@
 /* Variables de colores */
 :root {
-    /* Tema Diurno */
-    --background-day: #E6F4EA;
-    --text-day: #2C5F2D;
-    --introduction-bg-day: #A3C9A8;
-    --cv-bg-day: #D9CAB3;
-    --cv-text-day: #4A3F35;
-    --projects-bg-day: #B7D3C6;
-    --contact-bg-day: #E6F4EA;
-    --footer-bg-day: #4A3F35;
-    --footer-text-day: #D9CAB3;
-    --button-bg-day: #4A3F35;
-    --button-text-day: #D9CAB3;
-    --button-hover-bg-day: #2C5F2D;
-    --button-hover-text-day: #E6F4EA;
-    --blog-link-color-day: #2C5F2D; /* Verde bosque */
-    --blog-link-hover-color-day: #4CAF50; /* Verde brillante */
+    /* Tema Diurno - Terminal Azul/Gris MS-DOS (más claro y saturado) */
+    --background-day: #3a4fff;         /* Azul eléctrico claro */
+    --text-day: #fffbe6;               /* Amarillo pálido retro */
+    --introduction-bg-day: #5c7aff;    /* Azul claro saturado */
+    --cv-bg-day: #7ea6ff;              /* Azul pastel saturado */
+    --cv-text-day: #fffbe6;
+    --projects-bg-day: #4f6cff;        /* Azul medio saturado */
+    --contact-bg-day: #3a4fff;
+    --footer-bg-day: #2d39a1;          /* Azul intenso */
+    --footer-text-day: #fffbe6;
+    --button-bg-day: #2d39a1;
+    --button-text-day: #00ffe7;        /* Cian saturado */
+    --button-hover-bg-day: #00ffe7;
+    --button-hover-text-day: #2d39a1;
+    --blog-link-color-day: #00ffe7;    /* Cian saturado */
+    --blog-link-hover-color-day: #fffbe6;
 
-    /* Tema Nocturno */
-    --background-night: #1B1F23;
-    --text-night: #A8C3A3;
-    --introduction-bg-night: #2C3E3F;
-    --cv-bg-night: #3E4E50;
-    --projects-bg-night: #2C3E3F;
-    --contact-bg-night: #1B1F23;
-    --footer-bg-night: #2C3E3F;
-    --footer-text-night: #A8C3A3;
-    --button-bg-night: #4A3F35;
-    --button-text-night: #ff9800;
-    --button-hover-bg-night: #A8C3A3;
-    --button-hover-text-night: #1B1F23;
-    --blog-link-color-night: #A8C3A3; /* Verde grisáceo */
-    --blog-link-hover-color-night: #FF9800; /* Naranja */
+    /* Tema Nocturno - Terminal Negro/Verde */
+    --background-night: #101010;
+    --text-night: #00ff00;
+    --introduction-bg-night: #101010;
+    --cv-bg-night: #181c18;
+    --projects-bg-night: #101010;
+    --contact-bg-night: #181c18;
+    --footer-bg-night: #101010;
+    --footer-text-night: #00ff00;
+    --footer-link-hover-color-night: #ffffff;
+    --button-bg-night: #101010;
+    --button-text-night: #00ff00;
+    --button-hover-bg-night: #00ff00;
+    --button-hover-text-night: #101010;
+    --blog-link-color-night: #00ff00; /* Verde terminal */
+    --blog-link-hover-color-night: #101010; /* Verde neón */
 }
 
 /* Tema Diurno: Bosque durante el día */
@@ -42,12 +43,67 @@ body {
     color: var(--text-day); /* Verde bosque para el texto */
 }
 
+/* Evita scroll horizontal y barra blanca en móvil */
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+/* Navbar lateral */
+header .navbar {
+    min-width: 220px;
+    width: 220px;
+    border-radius: 0 20px 20px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: transparent; /* Fondo transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: flex-start; /* Alinea a la izquierda */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    position: fixed; /* Mantiene la navbar fija */
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Botón flotante de cambio de tema */
+#toggle-theme {
+    background-color: var(--button-bg-day);
+    color: var(--button-text-day);
+    border: 2px solid var(--button-text-day);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+#toggle-theme:hover {
+    background-color: var(--button-hover-bg-day);
+    color: var(--button-hover-text-day);
+    border-color: var(--button-hover-text-day);
+}
+body.night-mode #toggle-theme {
+    background-color: var(--button-bg-night);
+    color: var(--button-text-night);
+    border: 2px solid var(--button-text-night);
+}
+body.night-mode #toggle-theme:hover {
+    background-color: var(--button-hover-bg-night);
+    color: var(--button-hover-text-night);
+    border-color: var(--button-hover-text-night);
+}
+
 footer {
-    background-color: var(--footer-bg-day); /* Marrón oscuro */
-    color: var(--footer-text-day); /* Marrón claro */
+    background-color: var(--footer-bg-day);
+    color: var(--footer-text-day);
     text-align: center;
     padding: 20px 10px;
     font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+body.night-mode footer {
+    background-color: var(--footer-bg-night);
+    color: var(--footer-text-night);
 }
 
 footer ul {
@@ -60,11 +116,19 @@ footer ul {
 }
 
 footer ul li a {
-    color: #4caf50; /* Green links */
+    color: var(--blog-link-color-day);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 footer ul li a:hover {
-    color: #ff9800; /* Orange on hover */
+    color: var(--blog-link-hover-color-day);
+}
+
+body.night-mode footer ul li a {
+    color: var(--blog-link-color-night);
+}
+
+body.night-mode footer ul li a:hover {
+    color: var(--footer-link-hover-color-night);
 }

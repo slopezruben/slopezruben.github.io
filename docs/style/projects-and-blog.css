@@ -99,23 +99,26 @@ body.night-mode #projects-and-blog .list-group-item:focus a {
 #projects-and-blog .btn-primary {
     background-color: var(--button-bg-day);
     color: var(--button-text-day);
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid var(--button-text-day);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s;
 }
 
 body.night-mode #projects-and-blog .btn-primary {
     background-color: var(--button-bg-night);
     color: var(--button-text-night);
+    border: 2px solid var(--button-text-night);
 }
 
 #projects-and-blog .btn-primary:hover {
     background-color: var(--button-hover-bg-day);
     color: var(--button-hover-text-day);
+    border-color: var(--button-hover-text-day);
 }
 
 body.night-mode #projects-and-blog .btn-primary:hover {
     background-color: var(--button-hover-bg-night);
     color: var(--button-hover-text-night);
+    border-color: var(--button-hover-text-night);
 }
 
 #projects-and-blog h2 {
